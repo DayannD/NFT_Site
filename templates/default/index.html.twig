@@ -1,20 +1,149 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DefaultController!{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <main>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Another example headline.</h1>
+                        <p>Some representative placeholder content for the second slide of the carousel.</p>
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="#">Learn more</a>
+                        </p>
+                    </div>
+                </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/FiercePC/Desktop/Projet Prog/NFT_Site/src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/FiercePC/Desktop/Projet Prog/NFT_Site/templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
-    </ul>
-</div>
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{asset ('image/background-nft.webp')}}" alt="First slide">
+
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ asset('image/Background-HapeBeast.jpg')}}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ asset('image/HapeBeast-flullblackGang.jpg')}}" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+        <!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img loading="lazy" width="320" height="180" src="{{ asset('image/analyse.webp')}}" alt="">
+
+                    <h2 class="fw-bold">analyse du marché</h2>
+                    <p class="text-start">Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+                
+                <div class="col-lg-4">
+                    <img loading="lazy" width="320" height="180" src="{{ asset('image/connaissance.webp')}}" alt="">
+
+                    <h2 class="fw-bold">Banque de connaissance</h2>
+                    <p class="text-start">Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-lg-4">
+                    <img loading="lazy" width="320" height="180" src="{{ asset('image/Entreprise.webp')}}" alt="">
+
+                    <h2 class="fw-bold">Notre entreprise</h2>
+                    <p class="text-start">And lastly this, the third column of representative placeholder content.</p>
+                    <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading ">Qu'est-ce qu'un NFT ? </h2>
+                <p class="lead ">
+                    Les NFT prouvent la propriété d'un actif numérique unique comme l'art, la musique, les objets de collection, les vidéos ou toute autre chose avec la technologie blockchain.
+
+                    NFT signifie jeton non fongible. Cela ressemble à un terme technique intimidant (plus de discours de nerd, promis !). Mais les NFT ne sont que des certificats d'authenticité numériques.
+
+                    Si vous achetez une peinture physique, vous savez qu'elle est réelle parce que vous voyez la signature de l'artiste sur la toile. Quelqu'un peut photocopier le tableau, mais il n'en est pas propriétaire, vous si.
+                    Les NFT sont comme une signature pour les objets numériques : ils authentifient la propriété des actifs numériques tels que l'art, les objets de collection, la musique, les vidéos, les actifs du jeu, etc.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ asset('image/NFT-Russia.jpg')}}" width="500" height="500" alt="">
+
+            </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Comment Fonctionne un NFT ?</h2>
+                <p class="lead">
+                    Les NFT dépendent en majorité de la plateforme où ils sont créés. Dans ce cas, nous allons nous concentrer sur Ethereum, qui regroupe le plus grand nombre de ces crypto-arts.
+                    Comme on parle ici de « propriété », aucune autorité, personne ne peut annuler votre propriété à un NFT ou en recréer un exactement pareil. De plus, ils sont également « sans autorisation », c’est-à-dire que n’importe qui peut en créer, en acheter ou en vendre sans une quelconque autorisation. Toutefois, le rapport d’unicité demeure, même si n’importe qui peut le consulter.
+
+                    Autrement, on peut comparer un NFT à une carte à collectionner unique en son genre, disposée dans une vitrine ouverte et que tout le monde peut admirer. La seule spécificité est qu’il appartient à une seule et unique personne à un moment donné. Dans la pratique, il peut se représenter à travers une œuvre d’art numérique, une image. En soi, c’est l’existence même en tant qu’objet numérique dans la blockchain qui rend un NFT unique.
+                </p>
+            </div>
+            <div class="col-md-5 order-md-1 mt-5">
+                <img src="{{ asset('image/NFT-Avatar-futurist.jpg')}}" width="500" height="500" alt="">
+            </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+            <div class="col-md-7 ">
+                <h2 class="featurette-heading">Comment Acheter ou échanger un NFT ?</h2>
+                <p class="lead">
+                    Les NFT s’achètent et s’échangent comme n’importe quel autre crypto-monnaie basé sur Ethereum. Mais les transactions de ces jetons s’effectuent sur une plateforme différente, ou plutôt sur une extension de navigateur : Metamask. Elle vous permet d’interagir avec diverses composantes d’Ethereum, comme les échanges d’applications. De plus, Metamask peut être considéré comme un portefeuille numérique. Il regroupe tous vos jetons créés sur Ethereum, qu’ils soient fongibles ou non.
+
+                    Une fois l’extension installée, vous pouvez directement acquérir des NFT sur la plateforme moyennant des fonds. L’achat peut se faire via une carte de débit, telle que Apple Pay ou autres moyens de paiement. À noter qu’il s’agit réellement de fonds monétaires, et que la vigilance est vivement conseillée. En effet, une fois vos fonds acquis, veillez à ce que votre mot de passe Metamask, ainsi que la clé privée de votre portefeuille soit stocké dans un endroit sûr de votre ordinateur.
+                </p>
+            </div>
+            <div class="col-md-5 mt-5">
+                <img src="{{ asset('image/HapeBeast-White-lead.jpg')}}" width="500" height="500" alt="">
+            </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>© 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
+    </main>
 {% endblock %}
