@@ -134,6 +134,41 @@
             </div>
 
             <hr class="featurette-divider">
+            <div class="row row-cols-1 row-cols-md-3 g-4"> 
+            {% for datas in data.collections %} 
+                {% if datas.image_url != null %}
+                    <div class="col">
+                        <div class="card h-100">                  
+                            <img src="{{ datas.image_url}}" class="card-img-top" style="max-height:45%;" alt="..."> 
+                            
+                            <div class="card-body">
+                                <div class="profile-thumb-block">
+                                    <img src="{{ asset ('image/HapeBeast-White-lead.jpg')}}" alt="profile-image" class="profile"
+                                    style=" border-radius: 50%;
+                                            position: absolute;
+                                            bottom: 50%;
+                                            left: 50%;
+                                            max-width: 100px;
+                                            opacity: 1;
+                                            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+                                            border: 2px solid rgba(255, 255, 255, 1);
+                                            -webkit-transform: translate(-50%, 0%);
+                                            transform: translate(-50%, 0%);
+                                            z-index:99999;"
+                                    />
+                                </div>
+                                <h5 class="card-title">{{datas.name}}</h5>
+                                <p class="card-text">{{datas.created_date}}  {{datas.slug}}</p>
+                            </div>
+                        </div>
+                </div>
+                {% endif %}  
+
+            {% endfor %}
+            </div
+         
+
+            <hr class="featurette-divider">
 
             <!-- /END THE FEATURETTES -->
 
@@ -141,9 +176,9 @@
 
 
         <!-- FOOTER -->
-        <footer class="container">
+        {# <footer class="container">
             <p class="float-end"><a href="#">Back to top</a></p>
             <p>© 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-        </footer>
+        </footer> #}
     </main>
 {% endblock %}
