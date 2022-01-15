@@ -15,7 +15,7 @@ class CallApiService
     {
         $response = $this->client->request(
           'GET',
-          'https://api.opensea.io/api/v1/collections?offset=0&limit=30'
+          'https://api.opensea.io/api/v1/collections?offset=0&limit=300'
         );
         return $response->toArray();
     }
